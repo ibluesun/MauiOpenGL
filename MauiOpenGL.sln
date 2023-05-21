@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiOpenGL", "MauiOpenGL\Ma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiOpenGL.Views", "MauiOpenGL.Views\MauiOpenGL.Views.csproj", "{A7DCF953-606C-44D3-9846-6861F2D1495F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F601292-31A8-4CCD-8352-0E9A1069D840}"
+	ProjectSection(SolutionItems) = preProject
+		MauiOpenGL.png = MauiOpenGL.png
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
