@@ -22,7 +22,7 @@ namespace MauiOpenGL.Handlers;
 public partial class MauiOpenGLHandler : ViewHandler<MauiOpenGLView, AndroidOpenGLView>
 {
 
-    public static AndroidOpenTKBindingsContext OpenTKBinder { get; private set; } = new AndroidOpenTKBindingsContext();
+    public static AndroidOpenTKBindingsContext AndroidOpenTKBinder { get; private set; } = new AndroidOpenTKBindingsContext();
 
 
     public static IPropertyMapper<MauiOpenGLView, MauiOpenGLHandler> PropertyMapper = new PropertyMapper<MauiOpenGLView, MauiOpenGLHandler>(ViewHandler.ViewMapper)
@@ -47,10 +47,12 @@ public partial class MauiOpenGLHandler : ViewHandler<MauiOpenGLView, AndroidOpen
     {
         // let OpenTK knows where are the functions :)
 
-        GL.LoadBindings(OpenTKBinder);
+        GL.LoadBindings(AndroidOpenTKBinder);
 
 
-        return new AndroidOpenGLView(Context);
+        var aog =  new AndroidOpenGLView(Context);
+
+        return aog; 
     }
 
     protected override void ConnectHandler(AndroidOpenGLView platformView)

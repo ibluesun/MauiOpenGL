@@ -28,7 +28,9 @@ public class AndroidOpenGLView : GLSurfaceView
         
         SetEGLContextClientVersion(2);
 
-        this.PreserveEGLContextOnPause = true;
+        this.PreserveEGLContextOnPause = false;
+
+
 
 
 

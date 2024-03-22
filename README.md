@@ -29,12 +29,35 @@ please check the MauiProgram in the app to make sure that you've included your n
 ```
 
 
+# Windows Handler
+
+**Maui** uses WinUI3 inside its handler .. so to be able to use OpenGL ES you will have to rely on  Google **ANGLE**  (*Almost Native Graphics Layer Engine**) project.
+
+however the dll that is being used (as far as I know from this issue https://github.com/mono/SkiaSharp/issues/1893  is actually not targetting WinUI3 yet  .. but only targetting the **WinRT** API.
+
+so .. thanks to @levinli303 https://github.com/levinli303  and his patched dll .. found in https://github.com/mono/SkiaSharp/issues/1893#issuecomment-1805076715  
+
+and also can be found in his repo https://github.com/microsoft/vcpkg/compare/master...levinli303:vcpkg:angle-winui 
+
+also thanks to **SkiaSharp** project  (I used their code in creating the Windows SwapChainPanel) 
+
+the windows part can be shown beside the android one on the below snapshot
+
+
+
 ## Future 
 
-I am intending to try the same approach with a windows native view also  .. then  .. maybe getting miniMac and iPhone to try Angle on Metal  or  whatever it is :).
+Naturally  ..  Apple and IOS  should be the focus on the future  ..  but I don't have such devices for now.
 
-# Thank you
+## Finally 
+
+This repo is a proof of concept for using OpenTK in Maui  ..  the code is **Spaghetti**  and it is not a production thing by anymean  .. so take it with (two or three) grain of salt :D 
+
+Thank you,
+
+	Sadek
+
 
 ![alt text][logo]
 
-[logo]: MauiOpenGL.png "Logo Title Text 2"
+[logo]: MauiOpenGL.png "Maui Open GL"

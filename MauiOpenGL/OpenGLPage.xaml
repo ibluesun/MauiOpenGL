@@ -3,26 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiOpenGL.OpenGLPage"
              xmlns:muog="clr-namespace:MauiOpenGL.Views;assembly=MauiOpenGL.Views"
-             Title="OpenGLPage">
+             Title="OpenGL Page">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition />
+            <RowDefinition  />
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <muog:MauiOpenGLView   Grid.Row="1"  />
-        
+        <muog:MauiOpenGLView  x:Name="MauiOpenGLViral" Grid.Row="1"  >
+
+
+        </muog:MauiOpenGLView>
+
+
+
+
+
         <VerticalStackLayout  Spacing="10" Padding="10" Grid.Row="0" BackgroundColor="Yellow" >
 
             <Label TextColor="Black" Text="This view uses OpenTK to call openGL functions and a native android implementation for the GLSurfaceView"/>
             <Label TextColor="Black" Text="Future will be attempt to implement that also through the other platforms"/>
         </VerticalStackLayout>
-        
-        
+
+
+        <!--<Button x:Name="RefreshButton" Grid.Row="2" Text="Refresh" Clicked="RefreshButton_Clicked"></Button>-->
 
     </Grid>
 
+    <!--<muog:MauiOpenLView    />-->
 
             
     

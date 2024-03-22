@@ -33,7 +33,7 @@ public class AndroidOpenGLRenderer : Java.Lang.Object, GLSurfaceView.IRenderer
 
     public string EGL_VERSION { get; private set; }
 
-    UniversalGraphicsEngine.GradientBackground grb = new UniversalGraphicsEngine.GradientBackground();
+    LightGraphicsEngine.GradientBackground grb = new LightGraphicsEngine.GradientBackground();
 
 
     public void OnSurfaceCreated(IGL10 gl, Javax.Microedition.Khronos.Egl.EGLConfig config)
